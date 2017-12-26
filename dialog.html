@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <button type="button" id="btn">点击</button>
+        <!-- <div class="dialog">
+            <h4>弹窗</h4>
+            <button>确定</button>
+            <button>关闭</button>
+        </div> -->
+    <script src="./dialog.js"></script>
+    <script>
+        var btn = document.querySelector("#btn");
+        const obj = {
+            tit:"弹窗",
+            btn:['确定','关闭'],
+            True:function(){
+                alert('Angular很简单');
+            },
+            False:function(){
+                alert('Angular太难了');
+            }
+        }
+        btn.onclick = function(){
+            new dialog(obj);
+        }
+    </script>
+</body>
+</html>
